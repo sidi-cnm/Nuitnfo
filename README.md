@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+1Installation
 
-## Getting Started
+Pour installer les dépendances du projet, exécute la commande suivante :
+pnpm install
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2 Lancer le serveur
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Pour démarrer le serveur en mode développement :
+pnpm run dev
+Le projet sera accessible sur http://localhost:3000(exemple)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+Structure du projet
+components/
 
-To learn more about Next.js, take a look at the following resources:
+Contient tous les composants réutilisables de l’application (UI, layout, boutons, formulaires…).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+app/
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Contient les pages et routes principales de l’application.
 
-## Deploy on Vercel
+api/ :
+Contient toutes les routes API si nécessaire (exemple : api/client/route.js).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Pages principales :
+Exemple :
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+app/page.jsx → Home Page
+
+app/dashboard/page.jsx → Dashboard (si applicable)
+
+Les fichiers .jsx ou .tsx dans app/ représentent les différentes pages de l’application.
+
+
+
+Bonnes pratiques
+
+Organiser les composants dans components/ pour faciliter la réutilisation.
+
+Ajouter de nouvelles API dans app/api/ avec une structure claire.
+
+Chaque nouvelle page doit être ajoutée dans app/ en suivant la structure par dossiers pour la lisibilité.
